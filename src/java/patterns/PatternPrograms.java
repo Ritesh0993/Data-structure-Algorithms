@@ -63,13 +63,9 @@ public class PatternPrograms {
 
     public static void reverseRightHalfPyramidPattern(int n) {
 
-        for (int i = n; i >= 1; --i) {
-
-            for (int j = 0; j < i; j++) {
-                System.out.print(" ");
-                for (int k = j; k <= j; k++) {
-                    System.out.print("*");
-                }
+        for(int i=1;i<=n;i++){
+            for(int j =0;j<n-i+1;j++){
+                System.out.print("*");
             }
             System.out.println();
         }
@@ -126,20 +122,22 @@ public class PatternPrograms {
      */
 
 
-    public static void numberIncreasingReversePyramid(int n){
+    public static void numberIncreasingReversePyramid(int n) {
 
-
-
-
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j < n - i + 1; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
     }
-
 
 
 
     public static void main(String[] args) {
         //squareFillPattern(5);
         //rightHalfPyramid(3);
-        //reverseRightHalfPyramidPattern(6);
+        reverseRightHalfPyramidPattern(6);
        // numberIncreasingPyramid(5);
         //numberTriangle(10);
         numberIncreasingReversePyramid(10);
