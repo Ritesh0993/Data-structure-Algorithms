@@ -20,10 +20,10 @@ public class BasicMathProblems {
             int lastDigit = n % 10;
 
             if (reversedNumber > (Integer.MAX_VALUE - lastDigit) / 10) {
-                return 0;  // Agar overflow hua, toh 0 return kardo
+                return 0;
             }
             reversedNumber = (reversedNumber * 10) + lastDigit;
-            n = n / 10;   //32
+            n = n / 10;
         }
         return isNegative ? -reversedNumber : reversedNumber;
     }
