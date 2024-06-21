@@ -95,16 +95,54 @@ public class BasicMathProblems {
         }
     }
 
+    /**
+     *  Prime Numbers
+     * @param n
+     */
+
+    public static void primeNumber(int n){
+        int count = 0;
+
+        for(int i=1;i*i<=n;i++){
+            if(n%i==0){
+                count++;
+                if((n/i!=i)){
+                    count++;
+                }
+            }
+        }
+        if(count==2){
+            System.out.println("Given Number is Prime Number ");
+        }else{
+            System.out.println("Given Number is Not Prime Number ");
+        }
+    }
+
+    /**
+     *   GCD Gretest common divisor
+     *   HCF highest common factor
+     * @param a,b
+     */
+    public static int calculateGCD(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+
 
     public static void main(String[] args) {
         //  countNumber(12524);
         //   System.out.println(reverseNumber(1534236469));
         //   System.out.println(reverseNumber(-456));
-        //  System.out.println(isPalindrome(-121));
-
-        System.out.println(isArmstrongNumber(153));
-
-        printAllDivisior(1256);
+        //   System.out.println(isPalindrome(-121));
+       //    System.out.println(isArmstrongNumber(153));
+       //    printAllDivisior(1256);
+       //    primeNumber(11);
+             System.out.println("GCD/HCF of " +   calculateGCD(10, 12));
     }
 
 
