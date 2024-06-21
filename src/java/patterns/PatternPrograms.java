@@ -1,7 +1,5 @@
 package patterns;
 
-import java.sql.SQLOutput;
-
 public class PatternPrograms {
 
 
@@ -194,7 +192,7 @@ public class PatternPrograms {
 
     /**
      *   Star Diamond Pattern
-     * @param
+     * @param n
      */
 
     public static void startDiamondPattern(int n){
